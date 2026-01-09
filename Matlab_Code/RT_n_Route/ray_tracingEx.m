@@ -42,9 +42,9 @@ function rays = ray_tracingEx(file_path, rx_pos, maxReflections, numOfDiff, freq
     
     %% rx-site
     
-    % center_pos = [-2; 2; 1.4];
-    % rx_dim=[3 3];
-    % rx_pos = getRxPos(rx_dim, fc, center_pos);
+    center_pos = rx_pos;
+    rx_dim=[10 10];
+    rx_pos = getRxPos(rx_dim, fc, center_pos);
     
     rx = rxsite("cartesian", ...,
         "AntennaPosition", rx_pos);
@@ -68,3 +68,4 @@ function rays = ray_tracingEx(file_path, rx_pos, maxReflections, numOfDiff, freq
 
 
 end
+
