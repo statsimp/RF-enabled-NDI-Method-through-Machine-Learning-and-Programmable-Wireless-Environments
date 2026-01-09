@@ -2,7 +2,7 @@
 This repository corresponds to the needed scripts for realizing the results displayed in our paper, titled: "A novel RF-enabled Non-Destructive Inspection Method through Machine Learning and Programmable Wireless Environments". 
 
 ## Blender Scripts
-This directory contains the scripts that correspond to the morphing of thwe work. Here, the script that enables the shaping of one object to another is stored, while neccesitating the BLENDER software. 
+This directory contains the scripts that realize the morphing of various assets to each other, in order for enriching the total dataset. Here, the script that enables the shaping of one object to another is stored, while neccesitating the BLENDER software. 
 
 ## Matlab_Code
 Here lie the core corpus of the proposed work. In particular, the scripts that realize the RF-enabled NDI pipeline are stored here. This contains functionalities that relate to:
