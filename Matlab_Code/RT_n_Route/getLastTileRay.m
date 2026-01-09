@@ -20,7 +20,7 @@ function [tile, test] = getLastTileRay(elementPos, patches, reflVec, usedRIS)
 %    ). Cell array => {1}: test, wheter is tile or wall/ ground. {2}: tile
 %    label, or path.
 %
-%% getLastTileRay
+
 
 %total cuboid room dimensions
 room_height = 3;
@@ -121,3 +121,4 @@ end
 
 
 end
+
