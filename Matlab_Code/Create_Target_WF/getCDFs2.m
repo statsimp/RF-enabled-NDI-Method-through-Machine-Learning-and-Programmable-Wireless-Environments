@@ -2,7 +2,7 @@ function [ECDFs_az, ECDFs_el] = getCDFs2(pwe, elMin)
 % getCDFs: is a function to return the the mapped angles of the wavefront encoding/ decoding
 % based on the f, g functions ( "cdf approach" of the PWE characteristics
 % ). 
-%% getMappedWF
+
 
 num = numel(pwe);
 ECDFs_az = cell(num,1);
@@ -45,3 +45,4 @@ end
 
     
 end
+
