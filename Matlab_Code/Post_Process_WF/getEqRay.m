@@ -10,8 +10,6 @@ function eqRay = getEqRay(rays)
 %
 %    - eqRay: the calculated equivalent ray
 
-%% getEqRay
-
 % from path-loss to amplitude
 pathloss = rays(:,1);
 power = 10.^(pathloss/10);
@@ -44,3 +42,4 @@ doas = sum(doas, 1);
 eqRay = [azimuth, elevation, 10*log10(abs_h),angle_h];
 
 end
+
