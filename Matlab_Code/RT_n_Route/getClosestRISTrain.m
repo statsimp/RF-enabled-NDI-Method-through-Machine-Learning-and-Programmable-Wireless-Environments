@@ -11,7 +11,7 @@ function centRIS = getClosestRISTrain(point, patches)
 % ==============Return=======================
 %
 %    - label: the label of the departing tile
-%% getClosestRISTrain
+
 
 
 dist = patches(:,1:end-1) - point';
@@ -22,3 +22,4 @@ idx = find(dist == min(dist));
 centRIS = patches(idx, :);
 
 end
+
