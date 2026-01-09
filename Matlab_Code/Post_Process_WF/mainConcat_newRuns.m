@@ -1,3 +1,6 @@
+%% Is a script to concatenate the RF-pixel imae with the target DT visual, hence making them ready for the pix2pix model
+
+
 %% init params
 sdmSize = 0.1;
 Rx_size = 10;
@@ -50,5 +53,6 @@ for i = 1:length(names)
     end
 
 end
+
 
 
