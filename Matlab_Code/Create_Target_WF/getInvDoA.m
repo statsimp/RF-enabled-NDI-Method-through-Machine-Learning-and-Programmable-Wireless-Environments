@@ -2,7 +2,7 @@ function DoA = getInvDoA( pwe, rxDim, recSide, r)
 % getInvDoA: is a function to return the the mapped angles of the wavefront encoding/ decoding
 % based on the f, g functions ( "cdf approach" of the PWE characteristics )
 %
-%% getInvDoA
+
 
 % pre-process
 [rxPoints, ~, ~, ~]= getRXpointsTrain(rxDim, recSide);
@@ -33,3 +33,4 @@ DoA(2,:) = mapped_elWF;
 
 %a=5;
 end
+
