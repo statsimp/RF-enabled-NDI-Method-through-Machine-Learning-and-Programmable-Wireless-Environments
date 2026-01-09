@@ -23,9 +23,6 @@ function tile = getLastTileTrain(elementPos,totalDoA, patches, usedRIS, run)
 %
 
 
-%% init
-
-
 tile = cell(2,1);
 
 
@@ -233,3 +230,4 @@ end
 
 
 end
+
