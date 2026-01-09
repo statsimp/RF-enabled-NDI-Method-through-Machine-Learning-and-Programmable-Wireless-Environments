@@ -10,8 +10,8 @@ Rx_size = 10;
 currentFolder = pwd;
 
 % path to create a map folder in the current working directory
-mkdir( fullfile(currentFolder,"/newRuns3_InputSteeringImages_sdm_"+num2str(sdmSize)+"_Rx_"+num2str(Rx_size)+"/"));
-routeFolder = fullfile(currentFolder,"/newRuns3_InputSteeringImages_sdm_"+num2str(sdmSize)+"_Rx_"+num2str(Rx_size)+"/");
+mkdir( fullfile(currentFolder,""));
+routeFolder = fullfile(currentFolder,"");
 
 %% loop
 
@@ -32,7 +32,7 @@ for i = 1:num
         
     tic;
     % load the DoA steering info from ray-routing
-    direc = "C:\Users\statsimp\Documents\Matlab_Code\old_pc\newRuns3_InputSteering_sdm_0.1_Rx_10\";
+    direc = ""; % where the input RF-wfs are stored
     fWF = "ReceivingWFOf_";
     nameDoA = direc+fWF+nameObj+".mat";
     if isfile(nameDoA)
@@ -82,11 +82,12 @@ for i = iis
     iterationTotal = iterationTotal+1; % update the total iteration for all the data entries
 
     % image "wavefront"
-    img = wf2Img_newRuns(finalVec, scalars); 
+    img = wf2Img(finalVec, scalars); 
 
     % save the ray-routing results
     saveImg = routeFolder+nameObj+".png";
     imwrite(img, saveImg);
     toc;
 end
+
 
