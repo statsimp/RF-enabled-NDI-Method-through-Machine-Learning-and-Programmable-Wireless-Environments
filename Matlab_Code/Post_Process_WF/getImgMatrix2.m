@@ -1,3 +1,5 @@
+%% A function to return the equivalent RF-pixel image based on a colormap encoding
+
 function imageMatrix = getImgMatrix2(colorMatrix)
 
     % Size of each color block
@@ -31,3 +33,4 @@ function imageMatrix = getImgMatrix2(colorMatrix)
 
 
 end
+
