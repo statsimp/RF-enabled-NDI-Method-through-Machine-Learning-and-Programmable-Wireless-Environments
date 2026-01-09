@@ -2,18 +2,6 @@ function doa = getMappedWF2(wf, i, pwe)
 % getMappedWF: is a function to return the the mapped angles of the wavefront encoding/ decoding
 % based on the f, g functions ( "cdf approach" of the PWE characteristics )
 %
-% ==============Arguments=====================
-%
-%    - wf: the [0, 1] wavefront
-%
-%    - i: 
-%
-%    - test: whether we take into consideration the azimuth or elevation
-%    case
-% ==============Return=======================
-%
-%    - angles: the 
-%% getMappedWF2
 
 % init the wf values
 numRx = numel(pwe);
@@ -39,3 +27,4 @@ doa(1,:) = mapped_az;
 doa(2,:) = mapped_el;
 
 end
+
