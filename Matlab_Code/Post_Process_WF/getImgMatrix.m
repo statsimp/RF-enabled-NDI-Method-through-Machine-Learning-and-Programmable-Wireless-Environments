@@ -1,7 +1,8 @@
+%% A function to return the equivalent RF-pixel image based on a colormap encoding
+
 function imageMatrix = getImgMatrix(colorMatrix)
 
     % Size of each color block
-    %n = 10;
     n = 25;
     
     % Number of rows in the color matrix (must be a perfect square)
@@ -33,4 +34,5 @@ function imageMatrix = getImgMatrix(colorMatrix)
     %imshow(imageMatrix);
 
 end
+
     
