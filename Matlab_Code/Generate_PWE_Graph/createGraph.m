@@ -1,6 +1,6 @@
+%% This is the main script for generating a PWE graph based on some RIS dimensions and rx dimensions
 
-%ris = [0.3,0.4,0.5];
-ris = [0.1];
+ris = [0.5];
 rx = [10];
 
 for i = 1:length(ris)
@@ -14,3 +14,4 @@ for i = 1:length(ris)
         genGraph(len, wid, recSide, rxDim);
     end
 end
+
