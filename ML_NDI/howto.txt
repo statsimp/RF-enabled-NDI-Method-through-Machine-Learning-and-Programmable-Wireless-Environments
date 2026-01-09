@@ -1,0 +1,50 @@
+install CUDA and cuDNN files for your system. (If not already present)
+
+install anaconda and activate python 3.5.6
+
+Then run: 
+
+pip install protobuf==3.8
+pip install tensorflow-gpu==1.4.0
+pip install scipy==1.1.0
+pip install pillow
+
+================ RUNNING
+unzip your dataset inside a_folder_you_like.
+The folder_you_like must have two subdirs, train and val. Each must be filled with pictures (jpg).
+create a list of those files with
+dir /b /s > filelist.txt
+(remember to remove the "filelist.txt" from this list)
+and copy it under THE PRESENT FOLDER
+
+then, train with 
+python train.py --train filelist.txt --batch_size 64 (or other power of 2)
+
+--train: Directory of the Text File of Train Filelist
+--out_dir: Directory to Save your Train Result
+--epochs: Num of Epochs You Want
+--batch_size: Batch Size You Want
+--direction: 'AtoB' or 'BtoA'
+--gpus: 0 to use the first one, 1 to use the second one, etc... or 0,1 to use both (default)
+After finish training, saved models are in the ./output/checkpoint directory and the Train Results are saved in ./output/result.(default)
+
+======================================
+to test your stuff, 
+python test.py --visnum 64 (or more)
+(you might want to put another text file here, deleting the previous one, this one containing the "val" contents only.
+Also try: 
+
+python test.py --test newfileVAL.txt --visnum 64 (or more)
+
+--test: Directory of the Text File of Test Filelist
+--out_dir: Directory to Save your Train Result
+--ckpt_dir: Directory of Trained Model
+--visnum: batch size
+--direction: 'AtoB' or 'BtoA'
+--gpus: 0 to use the first one, 1 to use the second one, etc... or 0,1 to use both (default)
+
+
+)
+
+Test results will be saved in ./output_test(default)
+They will be triple figures, [Input | Generated | Ground Truth]
