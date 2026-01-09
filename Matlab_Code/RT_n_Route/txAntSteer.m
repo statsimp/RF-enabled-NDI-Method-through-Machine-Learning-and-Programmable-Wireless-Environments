@@ -1,4 +1,4 @@
-function txangles = txAntSteerCopyPaste( txpos, objPoint)
+function txangles = txAntSteer( txpos, objPoint)
 
 % % unit vectors in cartesian space
 ex = [1 0 0];
@@ -33,4 +33,5 @@ elevation = acosd( dot(helper, diff) );
 txangles = [-azimuth; -elevation];
 
 end
+
 
