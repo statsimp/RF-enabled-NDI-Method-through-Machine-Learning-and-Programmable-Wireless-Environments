@@ -201,6 +201,7 @@ p_Front = [p_Front; rx];
 patches = {p_Ceil, p_Left, p_Right, p_Back, p_Front};
 G = genRISGraphTrain(patches);
 
-savePath = "C:\Users\stats\Documents\Forth\0_Forth\MATLAB-Forth\RayTracing Matlab\Example\Graphs\" + "graphNew_"+num2str(lenTile)+"_"+num2str(rxDim)+".mat";
+savePath = ""; % enter the suitable savePath
 save(savePath, "G");
 end
+
