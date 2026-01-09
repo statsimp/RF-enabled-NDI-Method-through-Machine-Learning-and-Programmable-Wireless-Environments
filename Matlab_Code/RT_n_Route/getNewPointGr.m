@@ -12,7 +12,6 @@ function newPointGr = getNewPointGr(elementPos, lastTile)
 %    - newPointGr: the new point in the ground needed for the routing to
 %    room2
 %
-%% getNewPointGr
 
 % based on the reflection vector formula: r = d-2*dot(d,n)*n we will deduce
 % the newPointGR = (x, y, 0) => alpha*(x2-x, y2-y, z2) = (x-x1, y-y1, z1) 
@@ -29,3 +28,4 @@ y = (alpha*p2(2) + p1(2))/(1+alpha);
 newPointGr = [x, y, 0];
 
 end
+
