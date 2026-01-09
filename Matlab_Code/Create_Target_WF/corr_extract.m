@@ -1,4 +1,4 @@
-PARENTFOLDER = "C:\Users\stats\Documents\Forth\0_Forth\MATLAB-Forth\RayTracing Matlab\Example\new_runs_snapshots\";
+PARENTFOLDER = ""; % folder to contain the assets visualizations
 d = dir(PARENTFOLDER);
 num = length(d)-2;
 
@@ -30,3 +30,4 @@ end
 
 corr_final = {names, corr};
 save("new_runs_corr.mat", "corr_final");
+
