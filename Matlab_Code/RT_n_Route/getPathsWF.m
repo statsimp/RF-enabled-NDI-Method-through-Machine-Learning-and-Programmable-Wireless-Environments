@@ -16,7 +16,6 @@ function [paths, maxReflections] = getPathsWF(G, lastConn, objPoints, patches_Ma
 %    - path: the path of the ray-routing process corresponding to each rx array
 %    element
 
-%% getPathsTrain
 
 num = numel(lastConn);
 paths = cell(num,1);
@@ -147,3 +146,4 @@ end
 maxReflections = max(arithmosMonopatiou) - 2;
 
 end
+
