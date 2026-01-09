@@ -27,7 +27,7 @@ function rays = ray_tracingEx(file_path, rx_pos, maxReflections, numOfDiff, freq
     %% tx-site
     tx_antenna = horn("FlareLength",0.196,"FlareWidth",0.118,"FlareHeight",0.105);% transmitter horn antenna
     tx_pos = [-2.2; 4; 1.75]; % transmiter antenna position
-    tx_angles = txAntSteerCopyPaste(tx_pos, [ 0 0 0 ]);
+    tx_angles = txAntSteer(tx_pos, [ 0 0 0 ]);
 
     % creation of transmitter site
     tx = txsite("cartesian", ...
@@ -65,5 +65,6 @@ function rays = ray_tracingEx(file_path, rx_pos, maxReflections, numOfDiff, freq
 
     close(viewer);
     
+
 
 end
