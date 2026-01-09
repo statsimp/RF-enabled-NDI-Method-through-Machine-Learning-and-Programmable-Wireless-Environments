@@ -1,3 +1,5 @@
+%% a script to create the input RF-wavefronts
+
 %% init params
 sdmSize = 0.1;
 Rx_size = 10;
@@ -6,12 +8,9 @@ freq = 5e9;
 %% creating saving directories
 currentFolder = pwd;
 
-% path to create a map folder in the current working directory
-% mkdir( fullfile(currentFolder,"/newRuns_Input_sdm_"+num2str(sdmSize)+"_Rays_"+num2str(rayResolution)+"_Rx_"+num2str(Rx_size)+"/"));
-% routeFolder = fullfile(currentFolder,"/newRuns_Input_sdm_"+num2str(sdmSize)+"_Rays_"+num2str(rayResolution)+"_Rx_"+num2str(Rx_size)+"/");
-
 mkdir( fullfile(currentFolder,"/newRuns3_InputRouting_sdm_"+num2str(sdmSize)+"_Rx_"+num2str(Rx_size)+"/"));
 routeFolder = fullfile(currentFolder,"/newRuns3_InputRouting_sdm_"+num2str(sdmSize)+"_Rx_"+num2str(Rx_size)+"/");
+
 
 %% loop
 
@@ -31,7 +30,7 @@ for i = 1:num
     
     tic;
     % load the DoA steering info from ray-routing
-    direc = "C:\Users\statsimp\Documents\Matlab_Code\old_pc\newRuns3_DoARouting_sdm_0.1_Rx_10\";
+    direc = "";
     fSteer = "DoAOf_";
     nameDoA = direc+fSteer+nameObj+".mat";
     if isfile(nameDoA)
@@ -46,23 +45,12 @@ for i = 1:num
         el(idx_el) = 0;
     
         % load the routing info from ray-routing
-        fRouting = "C:\Users\statsimp\Documents\Matlab_Code\old_pc\newRuns3_final_routing_sdm_0.1_Rx_10\";
+        fRouting = "";
         fNameRouting = fRouting+"raysOf_"+nameObj+".mat";
         sRouting = load(fNameRouting, "results");
         routingRays = sRouting.results;
     
         
-        % % obtain wavefront
-        % finalVec = [az, el, az, el];
-        % 
-        % % image "wavefront"
-        % img = wf2Img4(finalVec); 
-        % 
-        % % save the ray-routing results
-        % saveImg = routeFolder+name{1}+"_iter"+num2str(iter)+".tiff";
-        % imwrite(img, saveImg);
-    
-    
         % obtain wavefront
         DoAinfo  = [az, el];
         finalVec = getReceivingWFnewRuns(routingRays, DoAinfo, freq);
@@ -77,6 +65,7 @@ for i = 1:num
     end
 
 end
+
 
 
 
