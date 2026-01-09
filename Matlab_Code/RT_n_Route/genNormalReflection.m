@@ -14,7 +14,7 @@ function normalVector = genNormalReflection(prevTile, centTile, afterTile)
 %
 %    - normalVector: the normal vector of the tile
 %
-%% genNormalReflection
+
 d = centTile - prevTile;
 r = afterTile - centTile;
 
@@ -33,3 +33,4 @@ normalVector = normalVector./norm(normalVector);
 %normalVector = normalVector./norm(normalVector);
 
 end
+
