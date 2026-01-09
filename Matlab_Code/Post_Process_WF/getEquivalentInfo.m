@@ -8,7 +8,6 @@ function eq = getEquivalentInfo(rays, heta)
 % ==============Return=======================
 %
 %    - eq: total equivalent RF info, based on rays array
-%% getEquivalentInfo
 
 Pt = 0; % 0 dBm trans power
 Ae = 1; % effective aperture
@@ -47,3 +46,4 @@ doas = sum(doas, 1);
 eq = [power, wrapTo2Pi(phase), az, el];
 
 end
+
