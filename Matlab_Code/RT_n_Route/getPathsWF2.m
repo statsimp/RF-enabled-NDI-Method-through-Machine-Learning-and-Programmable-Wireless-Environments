@@ -16,8 +16,6 @@ function [paths, initPoints, maxReflections] = getPathsWF2(G, lastConn, objPoint
 %    - path: the path of the ray-routing process corresponding to each rx array
 %    element
 
-%% getPathsTrain
-
 % set the graph edges weights
 % numEdges = numedges(G);
 % weights = ones(numEdges,1);
@@ -157,3 +155,4 @@ end
 maxReflections = max(arithmosMonopatiou) - 2;
 
 end
+
