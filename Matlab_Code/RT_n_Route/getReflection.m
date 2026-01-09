@@ -8,8 +8,8 @@ function r = getReflection(n, d)
 %=============Retutn===========================
 %
 %   - r: reflected vector
-%% getReflection
 
 r = d - 2*dot(d,n)*n;
 
 end
+
