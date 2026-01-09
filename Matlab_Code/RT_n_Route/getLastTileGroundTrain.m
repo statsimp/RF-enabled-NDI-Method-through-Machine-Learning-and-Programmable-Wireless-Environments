@@ -1,7 +1,7 @@
 function tile = getLastTileGroundTrain( elementPos, pointGround,newDoA, patches, usedRIS, run)
 
 %getLastTile: is a funcion that finds the tile that is the last to
-%connect the ray routing process to the Rx receiver array element in room2
+%connect the ray routing process to the Rx receiver array element
 % 
 % ==============Arguments=====================
 %
@@ -21,8 +21,6 @@ function tile = getLastTileGroundTrain( elementPos, pointGround,newDoA, patches,
 %    ). Cell array => {1}: test, wheter is tile or wall/ ground. {2}: tile
 %    label, or path.
 %
-
-%% init
 
 
 tile = cell(2,1);
@@ -151,3 +149,4 @@ end
 
 
 end
+
