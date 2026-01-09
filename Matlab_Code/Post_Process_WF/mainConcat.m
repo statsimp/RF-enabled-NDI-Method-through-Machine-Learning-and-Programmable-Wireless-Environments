@@ -9,12 +9,12 @@ Rx_size = 10;
 currentFolder = pwd;
 
 % path to create a map folder in the current working directory
-mkdir( fullfile(currentFolder,"/newRuns3_OutputSteering_sdm_"+num2str(sdmSize)+"_Rx_"+num2str(Rx_size)+"/"));
-routeFolder = fullfile(currentFolder,"/newRuns3_OutputSteering_sdm_"+num2str(sdmSize)+"_Rx_"+num2str(Rx_size)+"/");
+mkdir( fullfile(currentFolder,""));
+routeFolder = fullfile(currentFolder,"");
 
 %% loop
 
-f1 = "C:\Users\statsimp\Documents\Matlab_Code\old_pc\newRuns2_imgs500\";
+f1 = ""; % where the DTs are stored
 d = dir(f1);
 
 iterations = length(d)-2;
@@ -35,7 +35,7 @@ for i = 1:length(names)
     im1 = imread(f1+names{i});
     
     % load the DoA info from ray-routing
-    direc = "C:\Users\statsimp\Documents\Matlab_Code\old_pc\newRuns3_InputSteeringImages_sdm_0.1_Rx_10\";
+    direc = ""; % where the RF-pixel images are stored
     nameOfImg = nameObj;
     name2 = direc+nameOfImg+".stl.png";
     if isfile(name2)
@@ -53,6 +53,7 @@ for i = 1:length(names)
     end
 
 end
+
 
 
 
